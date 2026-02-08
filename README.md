@@ -28,7 +28,13 @@ This project uses a devcontainer setup with Docker Compose to run a Streamlit ap
    cd document-ingestion-service
    ```
 
-2. Start the services:
+2. (Optional) Configure environment variables:
+   ```bash
+   cp .env.example .env
+   # Edit .env with your preferred database credentials
+   ```
+
+3. Start the services:
    ```bash
    docker compose up -d
    ```
@@ -51,12 +57,13 @@ This project uses a devcontainer setup with Docker Compose to run a Streamlit ap
 
 ### Environment Variables
 
-The following environment variables are configured in `docker-compose.yml`:
+The following environment variables can be configured via a `.env` file (copy from `.env.example`):
 
-- `POSTGRES_HOST`: Database host (default: `db`)
 - `POSTGRES_DB`: Database name (default: `document_ingestion`)
 - `POSTGRES_USER`: Database user (default: `postgres`)
 - `POSTGRES_PASSWORD`: Database password (default: `postgres`)
+
+**Security Note**: For production use, always change the default password and use strong credentials. Never commit the `.env` file to version control.
 
 ### Persistent Storage
 
