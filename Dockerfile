@@ -2,12 +2,11 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
-# Copy requirements and install dependencies
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
-
 # Copy application code
 COPY app/ /app/
+
+RUN bash setup.sh
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Expose Streamlit default port
 EXPOSE 8501

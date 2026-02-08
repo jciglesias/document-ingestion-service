@@ -7,8 +7,8 @@ st.write("Welcome to the Document Ingestion Service!")
 
 # Display connection information
 st.subheader("Configuration")
-st.write(f"PostgreSQL Host: {os.getenv('POSTGRES_HOST', 'db')}")
-st.write(f"PostgreSQL Database: {os.getenv('POSTGRES_DB', 'document_ingestion')}")
+st.write(f"PostgreSQL Host: {os.getenv('POSTGRES_HOST', 'no host set')}")
+st.write(f"PostgreSQL Database: {os.getenv('POSTGRES_DB', 'no database set')}")
 
 st.subheader("Status")
 st.success("Application is running!")
