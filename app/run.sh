@@ -1,5 +1,5 @@
 #!/bin/bash
-cat > /app/.streamlit/secrets.toml <<EOF
+cat > .streamlit/secrets.toml <<EOF
 [connections.postgresql]
 dialect = "postgresql"
 host = "${POSTGRES_HOST}"
@@ -8,3 +8,5 @@ database = "${POSTGRES_DB}"
 username = "${POSTGRES_USER}"
 password = "${POSTGRES_PASSWORD}"
 EOF
+
+streamlit run main.py
