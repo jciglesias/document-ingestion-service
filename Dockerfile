@@ -11,4 +11,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 8501
 
 # Run the Streamlit app
-CMD ["/bin/bash", "run.sh"]
+CMD ["sh", "run.sh"]

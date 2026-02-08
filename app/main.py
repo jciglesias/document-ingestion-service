@@ -1,6 +1,8 @@
 import streamlit as st
 import os
 
+conn = st.connection("postgresql", type="sql")
+
 st.title("Document Ingestion Service")
 
 st.write("Welcome to the Document Ingestion Service!")
